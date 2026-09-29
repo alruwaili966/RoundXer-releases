@@ -265,11 +265,12 @@ Format: `docs/backup-format.md`.
   saved on the computer stay there until the user removes them (backups are
   encrypted; handover PDFs are not).
   Desktop reminders (backup, follow-ups) only appear while RoundXer is open.
-- Builds are not yet code-signed by Apple or Microsoft, and not yet in Google
-  Play or TestFlight. Beta installers for colleagues are on a public releases
-  page (installers and notes only, no source code) with SHA-256 checksums. The
-  Android app is signed with the developer's own release key; Windows
-  SmartScreen and macOS Gatekeeper warn on the first open of the desktop app.
+- Not yet in Google Play or TestFlight. Beta installers for colleagues are on a
+  public releases page (installers and notes only, no source code) with SHA-256
+  checksums. The Android app is signed with the developer's own release key.
+  The Mac app is signed with the developer's Apple Developer ID (from 0.1.1) but
+  not yet notarised, so macOS still asks once ("Open Anyway"). The Windows
+  installer is not code-signed, so SmartScreen warns on first run.
 
 ## Planned (later slices)
 
