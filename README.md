@@ -1,0 +1,68 @@
+# RoundXer — downloads
+
+RoundXer replaces the paper patient list on ward rounds: patients by area,
+progress notes, problems and results, hospital course, follow-ups and
+handover. Everything stays **on your own device, encrypted**. There is no
+account and no server, and nothing is sent anywhere unless you send a file yourself.
+
+This repository holds **installers and release notes only**. There is no source code here.
+
+> **Beta.** The installers are not yet signed by Apple, Microsoft or Google
+> Play, so your device warns you the first time. The steps below get past
+> each warning. App-store and TestFlight links come later.
+
+## Download
+
+Open **[Releases](../../releases)** and take the latest version. Pick the file for your device:
+
+| Device | File |
+|---|---|
+| Android phone | `RoundXer_<version>_android.apk` |
+| Windows 10 / 11 | `RoundXer_<version>_windows_x64-setup.exe` |
+| Mac with Apple chip (M1 or later) | `RoundXer_<version>_mac_apple-chip.dmg` |
+| iPhone | Not yet. TestFlight invitations will come later. |
+
+## Install
+
+**Android**
+1. Download the `.apk` on the phone and open it.
+2. When asked, allow "Install unknown apps" for the app you opened it with (browser or Files). Allow it for this install only.
+3. Tap Install. Then turn the "Install unknown apps" permission off again.
+
+**Windows**
+1. Run the `setup.exe` file. It installs for your Windows user only and needs no admin rights.
+2. If Windows says "Windows protected your PC", click **More info**, then **Run anyway**.
+
+**Mac**
+1. Open the `.dmg` file and drag **RoundXer** to Applications.
+2. The first time, macOS says it "could not verify" RoundXer. Click **Done**.
+3. Open System Settings → Privacy & Security. Scroll to Security and click **Open Anyway**. Confirm with your password or Touch ID. You do this only once.
+4. If macOS asks to let RoundXer use the keychain, choose **Always Allow**.
+
+## Update
+
+Install the new version over the old one. Your patients, settings and PIN stay:
+- **Android:** open the new `.apk`.
+- **Windows:** run the new `setup.exe`.
+- **Mac:** drag the new app to Applications and replace the old one.
+
+Make a backup first anyway (Areas → **Back up**).
+
+## Check the download (optional)
+
+Each release lists a SHA-256 checksum for every file. To check a file, compare its checksum with the listed one:
+- **Windows (PowerShell):** `Get-FileHash .\RoundXer_…-setup.exe`
+- **Mac (Terminal):** `shasum -a 256 ~/Downloads/RoundXer_….dmg`
+
+## Privacy, in short
+
+- Your data stays on your device, in an encrypted database (SQLCipher, AES-256). The app does not use the network.
+- Backups are encrypted `.roundxer` files. You choose where to send them.
+- Exported text, PDFs and screenshots are **not** encrypted. Share them only through channels your hospital allows.
+- RoundXer holds identifiable patient data. Follow your hospital's rules on what you may record on a personal device.
+
+For more detail, see the [user guide](USER-GUIDE.md) and [security and privacy](SECURITY-PRIVACY.md), which is written for hospital IT reviewers.
+
+## Questions and problems
+
+Contact the colleague who shared RoundXer with you. **Never post patient details anywhere**, including screenshots or files.

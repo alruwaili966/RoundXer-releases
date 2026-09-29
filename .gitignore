@@ -1,0 +1,11 @@
+# Installers go in GitHub Releases, never in git. Never commit backups or keys.
+*.roundxer
+*.apk
+*.aab
+*.exe
+*.msi
+*.dmg
+*.jks
+*.keystore
+*.key
+.env*
