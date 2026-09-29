@@ -17,6 +17,11 @@ server and nothing is sent anywhere unless you send a file yourself.
 | Windows | Run `RoundXer_<version>_windows_x64-setup.exe`. If Windows says "Windows protected your PC": **More info → Run anyway** (the installer is not signed yet). Installs for your user only, no admin rights needed. |
 | Mac | Apple-chip Macs (M1 or later). Open the `.dmg`, drag **RoundXer** to Applications. The first time, macOS says it "could not verify" RoundXer, because it is not yet signed by Apple: click **Done**, open System Settings → Privacy & Security, scroll to Security and click **Open Anyway**, then confirm with your Mac password or Touch ID. Only needed once. |
 
+**Updating.** Install the new version over the old one; your data, settings and
+PIN stay. On a computer (from version 0.1.1): Settings → About → **Check for
+updates** → **Install update**. RoundXer closes, installs it and opens again.
+This is the only time RoundXer goes online, and only when you press the button.
+
 ## 2. First start (about 2 minutes)
 
 The welcome screen says what RoundXer is, how it keeps your data private, and

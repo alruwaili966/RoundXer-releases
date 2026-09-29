@@ -41,7 +41,11 @@ Open **[Releases](../../releases)** and take the latest version. Pick the file f
 
 ## Update
 
-Install the new version over the old one. Your patients, settings and PIN stay:
+Install the new version over the old one. Your patients, settings and PIN stay.
+
+**Computer, from version 0.1.1:** Settings → About → **Check for updates** → **Install update**. RoundXer downloads the new version, checks its signature, installs it and opens again. Version 0.1.0 has no such button, so install 0.1.1 by hand once.
+
+By hand:
 - **Android:** open the new `.apk`.
 - **Windows:** run the new `setup.exe`.
 - **Mac:** drag the new app to Applications and replace the old one.
@@ -56,7 +60,7 @@ Each release lists a SHA-256 checksum for every file. To check a file, compare i
 
 ## Privacy, in short
 
-- Your data stays on your device, in an encrypted database (SQLCipher, AES-256). The app does not use the network.
+- Your data stays on your device, in an encrypted database (SQLCipher, AES-256). The phone app never uses the network. The computer app goes online only when you press **Check for updates**, and sends nothing about you or your patients.
 - Backups are encrypted `.roundxer` files. You choose where to send them.
 - Exported text, PDFs and screenshots are **not** encrypted. Share them only through channels your hospital allows.
 - RoundXer holds identifiable patient data. Follow your hospital's rules on what you may record on a personal device.

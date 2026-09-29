@@ -18,8 +18,11 @@ course and flags. Data model: `docs/data-model.md`.
 - Only on the user's own device, in one SQLite database file inside the app's
   private storage.
 - **No server, no cloud sync, no analytics, no crash reporting, no remote
-  logging.** The app makes no network requests and works with the network off.
-  Over-the-air update libraries (`expo-updates`) are deliberately not included.
+  logging.** The phone app makes no network requests and works with the network
+  off. Over-the-air update libraries (`expo-updates`) are deliberately not
+  included. The one exception is on the desktop: **Check for updates** (Settings
+  → About) goes online when the user presses it, and only then (see
+  "Update check" below). No patient or personal data is sent.
 - Android system backup is disabled for the app (`android:allowBackup="false"`),
   so neither the database nor key files are copied to Google device backups.
 - Data leaves the device only when the user makes an encrypted `.roundxer`
@@ -47,6 +50,12 @@ course and flags. Data model: `docs/data-model.md`.
   with no database and no `keys.json` (a reinstall), it removes its old
   Keychain entries before setup, so nothing from the deleted install lingers.
   It never does this while a database exists.
+- The app's files (encrypted database, `keys.json`, `setup.json`, safety copy)
+  are **excluded from iCloud and Finder backups** (the Documents folder is marked
+  "do not back up" at every start), matching Android, where app backup is off.
+  So they never reach Apple's servers; moving data to a new iPhone is done with
+  a `.roundxer` backup file. (Built 29/09/2026; to be confirmed on the first
+  iPhone build.)
 - A file opened with "Open in RoundXer" is copied by iOS into the app's
   Documents/Inbox folder; RoundXer deletes that copy after reading it (and any
   leftovers at start-up).
@@ -75,11 +84,24 @@ course and flags. Data model: `docs/data-model.md`.
 - Crypto uses the web view's built-in WebCrypto (AES-256-GCM, PBKDF2-SHA256):
   same algorithms and file format as the phone, verified by tests in both
   directions.
-- **No network:** the window runs under a Content Security Policy that allows
-  loading only the app's own bundled files and talking only to the desktop
-  program (`connect-src ipc:`); any attempt to reach the internet is blocked
-  by the web view. The program contains no update, telemetry or crash-report
-  code.
+- **No network from the window:** it runs under a Content Security Policy that
+  allows loading only the app's own bundled files and talking only to the
+  desktop program (`connect-src ipc:`); any attempt to reach the internet is
+  blocked by the web view. The program contains no telemetry or crash-report
+  code. Its only network code is the update check below.
+- **Update check (added 29/09/2026, at the user's request):** nothing runs on
+  its own. When the user presses **Check for updates**, the desktop program
+  requests `latest.json` from the public RoundXer releases page on GitHub
+  (`github.com/alruwaili966/RoundXer-releases`). The request carries only
+  what any web request carries (the computer's IP address, the app version and
+  platform); nothing from the database. If a newer version is listed and the
+  user confirms, the program downloads that installer and checks its
+  **signature** (Ed25519 / minisign) against the public key built into the app
+  before installing it; a download that fails the check is refused and nothing
+  changes. The signing key is kept offline by the developer (never in the
+  source repository). Windows: the installer replaces the program and reopens
+  RoundXer; macOS: the app is replaced and restarted. Patient data, keys and
+  settings are not touched by an update.
 - The web side can only ask the desktop program for fixed files (the database,
   `keys.json`, `secrets.json` with the PIN hash, the safety copy) and to save an
   export; the desktop program then shows the system "Save as" window and writes
@@ -266,6 +288,7 @@ discharged patients is built (see Retention and auto-delete).
 | Someone shoulder-surfs the PIN | Biometric mode; wait after wrong PINs | — |
 | Copy of the app's files without the keystore | Database is SQLCipher-encrypted; `keys.json` needs the passphrase or recovery key (PBKDF2 600 000); Android backup disabled | — |
 | Keystore loses the key | Restore with passphrase or recovery key; data never deleted | — |
-| Data sent to a server | No network code at all | — |
+| Data sent to a server | Phone: no network code at all. Desktop: only the update check, on request, which sends no data | Hospital-approved server only if the hospital asks |
+| Tampered or fake update | Desktop installs only updates signed with the developer's offline key (public key built into the app); HTTPS to GitHub | Apple / Microsoft code signing (slice 17) |
 | Backup file intercepted | AES-256-GCM `.roundxer`; key wrapped by passphrase / recovery key (PBKDF2 600 000), or a one-time passphrase for Share | — |
 | Wrong import wipes data | Merge never deletes local-only rows; Replace needs "REPLACE" and keeps a safety copy | — |
