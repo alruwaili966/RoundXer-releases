@@ -1,6 +1,6 @@
 # RoundXer privacy policy
 
-Last updated: 30/09/2026
+Last updated: 30/09/2026 (Android: no Internet permission)
 
 RoundXer is a ward-round notebook for clinicians. It is made by Abdulrahman Alruwaili.
 
@@ -22,7 +22,7 @@ Only when you choose to send it:
 
 ## Network use
 
-- The phone app (Android and iPhone) never uses the network.
+- The phone app (Android and iPhone) never uses the network. The Android app does not even have the Internet permission, so Android itself blocks any connection.
 - The computer app (Windows and Mac) goes online only when you press **Check for updates** in Settings → About. It then asks this releases page on GitHub for a newer version. Nothing about you or your patients is sent. GitHub sees the request like any web request (for example your IP address); see GitHub's own privacy statement.
 
 ## Your responsibilities

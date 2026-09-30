@@ -26,6 +26,9 @@ Open **[Releases](../../releases)** and take the latest version. Pick the file f
 ## Install
 
 **Android**
+
+Colleagues can also get RoundXer from **Google Play** (internal testing): ask the person who shared RoundXer to add your Google account email, then open the link they send. Otherwise:
+
 1. Download the `.apk` on the phone and open it.
 2. When asked, allow "Install unknown apps" for the app you opened it with (browser or Files). Allow it for this install only.
 3. Tap Install. Then turn the "Install unknown apps" permission off again.
@@ -61,7 +64,7 @@ Each release lists a SHA-256 checksum for every file. To check a file, compare i
 
 ## Privacy, in short
 
-- Your data stays on your device, in an encrypted database (SQLCipher, AES-256). The phone app never uses the network. The computer app goes online only when you press **Check for updates**, and sends nothing about you or your patients.
+- Your data stays on your device, in an encrypted database (SQLCipher, AES-256). The phone app never uses the network (the Android app has no Internet permission). The computer app goes online only when you press **Check for updates**, and sends nothing about you or your patients.
 - Backups are encrypted `.roundxer` files. You choose where to send them.
 - Exported text, PDFs and screenshots are **not** encrypted. Share them only through channels your hospital allows.
 - RoundXer holds identifiable patient data. Follow your hospital's rules on what you may record on a personal device.

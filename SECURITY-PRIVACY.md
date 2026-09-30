@@ -23,6 +23,11 @@ course and flags. Data model: `docs/data-model.md`.
   included. The one exception is on the desktop: **Check for updates** (Settings
   → About) goes online when the user presses it, and only then (see
   "Update check" below). No patient or personal data is sent.
+- The Android release app (Google Play and the releases page, from build 7)
+  **does not have the Internet permission**, so Android itself blocks any
+  network connection from it. It also drops other permissions it never uses
+  (network state, "display over other apps", Google push messaging, install
+  referrer).
 - Android system backup is disabled for the app (`android:allowBackup="false"`),
   so neither the database nor key files are copied to Google device backups.
 - Data leaves the device only when the user makes an encrypted `.roundxer`
@@ -290,7 +295,7 @@ discharged patients is built (see Retention and auto-delete).
 | Someone shoulder-surfs the PIN | Biometric mode; wait after wrong PINs | — |
 | Copy of the app's files without the keystore | Database is SQLCipher-encrypted; `keys.json` needs the passphrase or recovery key (PBKDF2 600 000); Android backup disabled | — |
 | Keystore loses the key | Restore with passphrase or recovery key; data never deleted | — |
-| Data sent to a server | Phone: no network code at all. Desktop: only the update check, on request, which sends no data | Hospital-approved server only if the hospital asks |
+| Data sent to a server | Phone: no network code at all; the Android app has no Internet permission. Desktop: only the update check, on request, which sends no data | Hospital-approved server only if the hospital asks |
 | Tampered or fake update | Desktop installs only updates signed with the developer's offline key (public key built into the app); HTTPS to GitHub | Apple / Microsoft code signing (slice 17) |
 | Backup file intercepted | AES-256-GCM `.roundxer`; key wrapped by passphrase / recovery key (PBKDF2 600 000), or a one-time passphrase for Share | — |
 | Wrong import wipes data | Merge never deletes local-only rows; Replace needs "REPLACE" and keeps a safety copy | — |
