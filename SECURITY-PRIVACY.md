@@ -268,9 +268,10 @@ Format: `docs/backup-format.md`.
 - Not yet in Google Play or TestFlight. Beta installers for colleagues are on a
   public releases page (installers and notes only, no source code) with SHA-256
   checksums. The Android app is signed with the developer's own release key.
-  The Mac app is signed with the developer's Apple Developer ID (from 0.1.1) but
-  not yet notarised, so macOS still asks once ("Open Anyway"). The Windows
-  installer is not code-signed, so SmartScreen warns on first run.
+  The Mac app is signed with the developer's Apple Developer ID and notarised
+  by Apple (from 0.1.2), so macOS opens it without a warning. The Windows
+  installer is not code-signed, so SmartScreen warns on first run. The iPhone
+  app goes through Apple's TestFlight.
 
 ## Planned (later slices)
 

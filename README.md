@@ -7,9 +7,10 @@ account and no server, and nothing is sent anywhere unless you send a file yours
 
 This repository holds **installers and release notes only**. There is no source code here.
 
-> **Beta.** The installers are not yet signed by Apple, Microsoft or Google
-> Play, so your device warns you the first time. The steps below get past
-> each warning. App-store and TestFlight links come later.
+> **Beta.** The Mac app is signed and notarised by Apple (from 0.1.2). The
+> Windows and Android installers are not yet signed by Microsoft or Google Play,
+> so those devices warn you the first time; the steps below get past it.
+> iPhone (TestFlight) and store links come later.
 
 ## Download
 
@@ -34,10 +35,10 @@ Open **[Releases](../../releases)** and take the latest version. Pick the file f
 2. If Windows says "Windows protected your PC", click **More info**, then **Run anyway**.
 
 **Mac**
-1. Open the `.dmg` file and drag **RoundXer** to Applications.
-2. The first time, macOS says it "could not verify" RoundXer. Click **Done**.
-3. Open System Settings → Privacy & Security. Scroll to Security and click **Open Anyway**. Confirm with your password or Touch ID. You do this only once.
-4. If macOS asks to let RoundXer use the keychain, choose **Always Allow**.
+1. Open the `.dmg` file and drag **RoundXer** to Applications. Open it.
+2. If macOS asks to let RoundXer use the keychain, choose **Always Allow**.
+
+Versions before 0.1.2 were not notarised: macOS said it "could not verify" RoundXer. Then click **Done**, open System Settings → Privacy & Security and click **Open Anyway** (once).
 
 ## Update
 
