@@ -1,5 +1,7 @@
 # RoundXer privacy policy
 
+> The current version of this policy is at **https://roundxer.com/privacy**.
+
 Last updated: 30/09/2026 (Android: no Internet permission)
 
 RoundXer is a ward-round notebook for clinicians. It is made by Abdulrahman Alruwaili.

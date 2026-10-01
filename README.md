@@ -5,7 +5,7 @@ progress notes, problems and results, hospital course, follow-ups and
 handover. Everything stays **on your own device, encrypted**. There is no
 account and no server, and nothing is sent anywhere unless you send a file yourself.
 
-This repository holds **installers and release notes only**. There is no source code here.
+Website: **https://roundxer.com**. This repository holds **installers and release notes only**. There is no source code here.
 
 > **Beta.** The Mac app is signed and notarised by Apple (from 0.1.2). The
 > Windows and Android installers are not yet signed by Microsoft or Google Play,
@@ -73,4 +73,4 @@ For more detail, see the [user guide](USER-GUIDE.md) and [security and privacy](
 
 ## Questions and problems
 
-Contact the colleague who shared RoundXer with you. **Never post patient details anywhere**, including screenshots or files.
+Email **support@roundxer.com** or see https://roundxer.com/support. **Never send or post patient details**, including screenshots or files.
