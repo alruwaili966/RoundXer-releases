@@ -10,7 +10,7 @@ Website: **https://roundxer.com**. This repository holds **installers and releas
 > **Beta.** The Mac app is signed and notarised by Apple (from 0.1.2). The
 > Windows and Android installers are not yet signed by Microsoft or Google Play,
 > so those devices warn you the first time; the steps below get past it.
-> iPhone (TestFlight) and store links come later.
+> iPhone and iPad: [App Store](https://apps.apple.com/app/roundxer/id6817611660).
 
 ## Download
 
@@ -21,7 +21,7 @@ Open **[Releases](../../releases)** and take the latest version. Pick the file f
 | Android phone | `RoundXer_<version>_android.apk` |
 | Windows 10 / 11 | `RoundXer_<version>_windows_x64-setup.exe` |
 | Mac with Apple chip (M1 or later) | `RoundXer_<version>_mac_apple-chip.dmg` |
-| iPhone | Not yet. TestFlight invitations will come later. |
+| iPhone / iPad | [App Store](https://apps.apple.com/app/roundxer/id6817611660) |
 
 ## Install
 
