@@ -12,7 +12,7 @@ server and nothing is sent anywhere unless you send a file yourself.
 
 | Device | How |
 |---|---|
-| iPhone | Later: TestFlight invitation → install **TestFlight** from the App Store → open the invitation → Install. |
+| iPhone / iPad | Free on the App Store: https://apps.apple.com/app/roundxer/id6817611660 |
 | Android | Google Play testing link (once available). Until then: the `RoundXer_<version>_android.apk` file from the releases page — open it on the phone and allow "Install unknown apps" for the app you opened it with, only for this install. |
 | Windows | Run `RoundXer_<version>_windows_x64-setup.exe`. If Windows says "Windows protected your PC": **More info → Run anyway** (the installer is not signed yet). Installs for your user only, no admin rights needed. |
 | Mac | Apple-chip Macs (M1 or later). Open the `.dmg`, drag **RoundXer** to Applications. The first time, macOS says it "could not verify" RoundXer, because it is not yet signed by Apple: click **Done**, open System Settings → Privacy & Security, scroll to Security and click **Open Anyway**, then confirm with your Mac password or Touch ID. Only needed once. |
