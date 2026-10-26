@@ -8,8 +8,8 @@ account and no server, and nothing is sent anywhere unless you send a file yours
 Website: **https://roundxer.com**. This repository holds **installers and release notes only**. There is no source code here.
 
 > **Beta.** The Mac app is signed and notarised by Apple (from 0.1.2). The
-> Windows and Android installers are not yet signed by Microsoft or Google Play,
-> so those devices warn you the first time; the steps below get past it.
+> Windows installer is not yet code-signed, so Windows warns you the first time; the
+> steps below get past it. Android: [Google Play](https://play.google.com/store/apps/details?id=com.alruwaili.roundxer).
 > iPhone and iPad: [App Store](https://apps.apple.com/app/roundxer/id6817611660).
 
 ## Download
@@ -18,7 +18,7 @@ Open **[Releases](../../releases)** and take the latest version. Pick the file f
 
 | Device | File |
 |---|---|
-| Android phone | `RoundXer_<version>_android.apk` |
+| Android phone | [Google Play](https://play.google.com/store/apps/details?id=com.alruwaili.roundxer), or `RoundXer_<version>_android.apk` here |
 | Windows 10 / 11 | `RoundXer_<version>_windows_x64-setup.exe` |
 | Mac with Apple chip (M1 or later) | `RoundXer_<version>_mac_apple-chip.dmg` |
 | iPhone / iPad | [App Store](https://apps.apple.com/app/roundxer/id6817611660) |
@@ -27,7 +27,7 @@ Open **[Releases](../../releases)** and take the latest version. Pick the file f
 
 **Android**
 
-Colleagues can also get RoundXer from **Google Play** (internal testing): ask the person who shared RoundXer to add your Google account email, then open the link they send. Otherwise:
+Get it from **[Google Play](https://play.google.com/store/apps/details?id=com.alruwaili.roundxer)**. Phones without Google Play can install the app file instead:
 
 1. Download the `.apk` on the phone and open it.
 2. When asked, allow "Install unknown apps" for the app you opened it with (browser or Files). Allow it for this install only.
