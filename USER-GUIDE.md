@@ -13,7 +13,7 @@ server and nothing is sent anywhere unless you send a file yourself.
 | Device | How |
 |---|---|
 | iPhone / iPad | Free on the App Store: https://apps.apple.com/app/roundxer/id6817611660 |
-| Android | Free on Google Play: https://play.google.com/store/apps/details?id=com.alruwaili.roundxer (phones without Google Play: the `.apk` file from the releases page). |
+| Android | Free on Google Play: https://play.google.com/store/apps/details?id=com.alruwaili.roundxer |
 | Windows | Run `RoundXer_<version>_windows_x64-setup.exe`. If Windows says "Windows protected your PC": **More info → Run anyway** (the installer is not signed yet). Installs for your user only, no admin rights needed. |
 | Mac | Apple-chip Macs (M1 or later). Open the `.dmg`, drag **RoundXer** to Applications. The first time, macOS says it "could not verify" RoundXer, because it is not yet signed by Apple: click **Done**, open System Settings → Privacy & Security, scroll to Security and click **Open Anyway**, then confirm with your Mac password or Touch ID. Only needed once. |
 

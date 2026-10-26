@@ -18,7 +18,7 @@ Open **[Releases](../../releases)** and take the latest version. Pick the file f
 
 | Device | File |
 |---|---|
-| Android phone | [Google Play](https://play.google.com/store/apps/details?id=com.alruwaili.roundxer), or `RoundXer_<version>_android.apk` here |
+| Android phone | [Google Play](https://play.google.com/store/apps/details?id=com.alruwaili.roundxer) |
 | Windows 10 / 11 | `RoundXer_<version>_windows_x64-setup.exe` |
 | Mac with Apple chip (M1 or later) | `RoundXer_<version>_mac_apple-chip.dmg` |
 | iPhone / iPad | [App Store](https://apps.apple.com/app/roundxer/id6817611660) |
@@ -27,11 +27,7 @@ Open **[Releases](../../releases)** and take the latest version. Pick the file f
 
 **Android**
 
-Get it from **[Google Play](https://play.google.com/store/apps/details?id=com.alruwaili.roundxer)**. Phones without Google Play can install the app file instead:
-
-1. Download the `.apk` on the phone and open it.
-2. When asked, allow "Install unknown apps" for the app you opened it with (browser or Files). Allow it for this install only.
-3. Tap Install. Then turn the "Install unknown apps" permission off again.
+Get it from **[Google Play](https://play.google.com/store/apps/details?id=com.alruwaili.roundxer)**. Updates arrive through Google Play.
 
 **Windows**
 1. Run the `setup.exe` file. It installs for your Windows user only and needs no admin rights.
@@ -50,7 +46,7 @@ Install the new version over the old one. Your patients, settings and PIN stay.
 **Computer, from version 0.1.1:** Settings → About → **Check for updates** → **Install update**. RoundXer downloads the new version, checks its signature, installs it and opens again. Version 0.1.0 has no such button, so install 0.1.1 by hand once.
 
 By hand:
-- **Android:** open the new `.apk`.
+- **Android:** Google Play updates RoundXer.
 - **Windows:** run the new `setup.exe`.
 - **Mac:** drag the new app to Applications and replace the old one.
 
